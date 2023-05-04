@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turners Cars</title>
+    <link rel="stylesheet" href="style.css">
+     
+
+</head>
+<body>
+   <div class="container">
+       <nav>
+           <img src="images/logo.png" class="logo">
+           <ul>
+               <li><a href="">Find a Car</a></li>
+               <li><a href="">Sell Your Car</a></li>
+               <li><a href="">Finance</a></li>
+               <li><a href="">Insurance</a></li>
+               <li><a href=""><span>Online_Auction</span></a></li>
+           </ul>
+         
+       </nav>
+       <div class="left-col">
+        <img src="images/bg2.jpg" class="back-video">
+        <!--<video autoplay loop muted class="back-video">
+            <source src="images/turners.mp4" type="video/mp4" class="v4_p">
+        </video> -->     
+        </div>
+         
+        <div class="right-col">
+            <h1>Interested in <br><span class="auto-input"></span></h1><br><br>
+            <h2><span>One-Stop-Shop</span> for all your car needs.</h2>
+           <!--<h1>Helping Kiwies<br>Buy and Sell cars over 50 years</h1>-->
+
+                <div class="team">
+                    <div class="user-col">
+                        <img src="images/bg.jpg">
+                        <div class="info">
+                            <h4><span>Buy a car</span></h4> 
+                        </div>                        
+                    </div>
+                    <br>
+                    <div class="user-col">
+                        <img src="images/bg1.jpg">
+                        <div class="info">
+                            <h4><span>Sell a Car</span></h4>                          
+                        </div>                
+                    </div>
+                    <div class="user-col">
+                        <img src="images/finance.jpg">
+                        <div class="info">
+                            <h4><span>Finance</span></h4>                           
+                        </div>                    
+                    </div>
+                    <div class="user-col">
+                        <img src="images/insurance.jpg">
+                        <div class="info">
+                            <h4><span>Insurance</span></h4>
+                        </div>                        
+                    </div>
+                </div>
+       </div> 
+       <div class="main-text">
+        <h1>Helping Kiwies Buy and Sell cars over 50 years</h1>
+       </div>
+
+
+   </div>
+   
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+
+   </script>
+  <script>
+      var typed = new Typed(".auto-input", {
+          strings: ["Buying a car", "Selling a car", "Personal loan","Car insurance"],
+          typeSpeed: 150,
+          backSpeed: 150,
+          loop: true
+      })
+  </script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //To minimise the height of chatbox
+        $(document).ready(function() {
+            window.addEventListener('dfMessengerLoaded', function (event) {
+            $r1 = document.querySelector("df-messenger");
+            $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+            $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+            var sheet = new CSSStyleSheet;
+            // manage box height from here
+            sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 450px }`);
+            $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+            });
+        });
+    </script> 
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Carmate"
+    chat-icon="https://i.postimg.cc/cCvbwzrV/chatbot.gif";
+    button-titlebar="https://i.postimg.cc/cCvbwzrV/chatbot.gif";
+    agent-id="c14ff321-cf7b-4c2d-9301-19a4ecac6064"
+    language-code="en"
+  ></df-messenger>
+</body>
+</html>
