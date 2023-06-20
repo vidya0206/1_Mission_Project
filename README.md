@@ -7,10 +7,13 @@ This mission 1 is all about built a prototype chatbot that answers questions abo
 1. html
 2. css
 3. Java script
-4. dialogueflow
+4. dialogue flow
 
 ## Features:
-Chatbot will give you the answers related to all online auctions faqs.
+Chatbot will give you the answers related to all online auction faqs.
+
+**Contributing**
+Contributions are welcome! If you encounter any issues or have suggestions for improvement, please create a new issue or submit a pull request.
 
 
 ## Installation
